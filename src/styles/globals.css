@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+/* Tokens only */
+:root {
+  --foreground: #171717;
+  --background: #ffffff;  
+}
+
+html.dark {
+  --foreground: #ededed;
+  --background: #171717; 
+}
+
+/* Typography only */
+body {
+  color: var(--foreground);
+  background:  var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
