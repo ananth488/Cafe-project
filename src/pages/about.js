@@ -1,5 +1,12 @@
+import MetaSEO from "@/components/MetaSEO";
+
 export default function About() {
   return (
+    <>
+    <MetaSEO title={"About Us | Urban Brew Café – Our Story & Values"}
+                     description={"Learn about Urban Brew Café, our story, mission, and passion for serving quality coffee and fresh snacks in a warm, welcoming atmosphere."}
+                     keywords={"About Urban Brew Café, cafe story, coffee shop mission, best cafe, artisan coffee"}
+            />
     <section className="px-5 md:px-10 py-14">
       <div className="max-w-6xl mx-auto space-y-20">
 
@@ -95,5 +102,6 @@ export default function About() {
 
       </div>
     </section>
+    </>
   );
 }

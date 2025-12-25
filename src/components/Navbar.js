@@ -6,8 +6,7 @@ import { useRouter } from "next/router";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [isSelected, setIsSelected]=useState("/")
-  const router =useRouter()
+  const router = useRouter()
   const menuList=[
     {title:"Home", path:"/"},
       {title:"Menu", path:"/menu"},
@@ -41,7 +40,7 @@ export default function Navbar() {
         {/* Right side controls (Desktop) */}
         <div className="hidden md:flex items-center gap-6">
           {menuList.map((data,index)=>(
-<Link key={index} href={data.path} className={`hover:text-amber-600 ${data.path===router.pathname?"text-amber-600":""}`}>{data.title}</Link>
+<Link key={index} href={data.path} className={`hover:text-amber-600 ${data.path === router.pathname?"text-amber-600":""}`}>{data.title}</Link>
           ))}
           
           <ThemeToggle />

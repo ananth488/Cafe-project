@@ -1,3 +1,4 @@
+import MetaSEO from "@/components/MetaSEO";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -91,6 +92,11 @@ export default function Contact() {
   };
 
   return (
+    <>
+    <MetaSEO title={"Contact Us | Urban Brew Café – Get in Touch"}
+                         description={"Contact Urban Brew Café for orders, inquiries, or feedback. We’re here to help you enjoy great coffee and snacks."}
+                         keywords={"Contact Urban Brew Café, cafe contact, coffee shop contact, order coffee, cafe enquiry"}
+                />
     <section className="px-5">
       <div className="max-w-7xl mx-auto space-y-20 p-5">
 
@@ -171,6 +177,7 @@ export default function Contact() {
 />
 </div>  
 </div>
-</section>    
+</section> 
+</>   
   );
 }

@@ -1,4 +1,5 @@
 import Banner from "@/components/Banner";
+import MetaSEO from "@/components/MetaSEO";
 import Link from "next/link";
 
 const featuredMenu = [
@@ -21,6 +22,11 @@ const featuredMenu = [
 
 export default function Home() {
   return (
+    <>
+    <MetaSEO title={"Urban Brew Café | Fresh Coffee & Snacks"}
+             description={"Urban Brew Café offers fresh coffee, snacks, and a cozy atmosphere."}
+             keywords={"cafe, coffee, snacks, urban brew"}
+    />
     <main>
       {/* ================= HERO SECTION ================= */}
       {/* <section
@@ -111,5 +117,6 @@ export default function Home() {
       {/* ================= FOOTER ================= */}
       
     </main>
+    </>
   );
 }

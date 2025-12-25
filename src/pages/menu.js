@@ -1,3 +1,5 @@
+import MetaSEO from "@/components/MetaSEO";
+
 const menu = [
   {
     name: "Cappuccino",
@@ -57,7 +59,7 @@ const menu = [
   {
     name: "Garlic Bread",
     price: "₹160",
-    image:"/img/Garlic-Bread.webp",
+    image: "/img/Garlic-Bread.webp",
   },
   {
     name: "Sandwich",
@@ -113,38 +115,44 @@ const menu = [
 
 export default function Menu() {
   return (
-    <section className="py-16 px-6 max-w-7xl mx-auto">
-      {/* Heading */}
-      <h1 className="text-4xl font-bold text-center mb-12 animate-slideUp">
-        Our Menu
-      </h1>
+    <>
+      <MetaSEO title={"Menu | Urban Brew Café – Coffee, Snacks & More"}
+        description={"Explore the Urban Brew Café menu featuring freshly brewed coffee, tea, pastries, snacks, and delicious bites made with quality ingredients."}
+        keywords={"Urban Brew Café menu, coffee menu, cafe snacks, pastries, tea, breakfast cafe"}
+      />
+      <section className="py-16 px-6 max-w-7xl mx-auto">
+        {/* Heading */}
+        <h1 className="text-4xl font-bold text-center mb-12 animate-slideUp">
+          Our Menu
+        </h1>
 
-      {/* Menu Grid */}
-      <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        {menu.map((item, i) => (
-          <div
-            key={i}
-            className=" rounded overflow-hidden shadow transition transform hover:-translate-y-2 hover:shadow-xl animate-fadeIn"
-          >
-            {/* Image */}
-            <img
-              src={item.image}
-              alt={item.name}
-              className="h-48 w-full object-cover transition duration-500 hover:scale-105"
-            />
+        {/* Menu Grid */}
+        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          {menu.map((item, i) => (
+            <div
+              key={i}
+              className=" rounded overflow-hidden shadow transition transform hover:-translate-y-2 hover:shadow-xl animate-fadeIn"
+            >
+              {/* Image */}
+              <img
+                src={item.image}
+                alt={item.name}
+                className="h-48 w-full object-cover transition duration-500 hover:scale-105"
+              />
 
-            {/* Content */}
-            <div className="p-5 text-center">
-              <h3 className="font-semibold text-lg mb-2">
-                {item.name}
-              </h3>
-              <p className="text-amber-600 font-bold">
-                {item.price}
-              </p>
+              {/* Content */}
+              <div className="p-5 text-center">
+                <h3 className="font-semibold text-lg mb-2">
+                  {item.name}
+                </h3>
+                <p className="text-amber-600 font-bold">
+                  {item.price}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
-    </section>
+          ))}
+        </div>
+      </section>
+    </>
   );
 }
